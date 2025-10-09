@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
+import Child from '../component/child'
+import {themecontext}from '../component/theme'
 export const Homepage = () => {
-    const [state,setState]=useState()
+    const [theme,setTheme]=useState('light')
     
     return(
-        <>
-        <h1>value:{state}</h1>
-        </>
+        <themecontext.Provider value={{theme,setTheme}}>
+        <h1>value2:{theme}</h1>
+<Child/>
+        </themecontext.Provider>
     )
 }

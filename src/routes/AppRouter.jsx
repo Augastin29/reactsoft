@@ -1,4 +1,4 @@
-// total app
+// total app value change by him
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Homepage } from '../pages/Homepage';
 import { About } from '../pages/About'
