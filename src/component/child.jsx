@@ -1,3 +1,4 @@
+//child compenent to 
 import react, { useContext } from 'react';
 import { themecontext } from './theme'
 function Child() {
