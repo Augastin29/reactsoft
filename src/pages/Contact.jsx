@@ -1,4 +1,4 @@
-import {useMemo,useState} from 'react'
+import {useMemo,useState,useReducer} from 'react'
 
 export  const Contact = () => {
     const [count,setCount]=useState(10)
@@ -13,6 +13,21 @@ export  const Contact = () => {
     const addfoun=()=>{
         setArrval([...arrval,Math.round(count*Math.random())])
     }
+    // usereduce example handl
+    let reducer=(state,counteraction)=>{
+        switch(counteraction.type){
+            case'increment':
+            return {...state,count:state.count+1};
+            case'decrement':
+            return {...state,count:state.count-1};
+            case'reset':
+            return {...state,count:0};
+            default:return state;
+        }
+
+    }
+    const [state,dispatch]=useReducer(reducer,{count:0})
+    const [addcount,setAddcount]=useState(0)
 
     return(
         <>
@@ -22,6 +37,11 @@ export  const Contact = () => {
         <p>arrvalue:{arrval}</p>
         <p>{maxval()}</p>
         <p>count:{count}</p>
+        <h2>usereduce component</h2>
+        <button onClick={()=>{dispatch({type:'increment'})}}>increment</button>
+         <button onClick={()=>{dispatch({type:'decrement'})}}>decrement</button>
+          <button onClick={()=>{dispatch({type:'reset'})}}>reset</button>
+          <p>count{state.count}</p>
         </>
     )
 }

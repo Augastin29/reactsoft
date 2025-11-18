@@ -24,6 +24,9 @@ export const Navbar = () => {
                         News
                     </Typography>
                     <Button color="inherit">
+                        <Link to="/">home</Link>
+                    </Button>
+                    <Button color="inherit">
                        <Link to="/about">About</Link> 
                      </Button>
                      <Button color="inherit">
