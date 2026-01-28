@@ -39,7 +39,7 @@ export const About = () => {
 
         <div className="food-card">
           <img src="http://localhost:5173/reactsoft/image/samosa-food-social-media-promotion-instagram-banner-post-template-design\samosa.jpg" alt="Food 3" />
-          <h4>Burgers</h4>
+          <h4>Burgers with sanvages</h4>
         </div>
       </div>
 
