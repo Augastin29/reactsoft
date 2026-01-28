@@ -1,0 +1,19 @@
+.food-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.food-card {
+  width: 32%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.food-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
