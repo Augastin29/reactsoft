@@ -7,7 +7,7 @@ import { Navbar } from '../component/Navbar'
 import {Login} from '../pages/Login'
 export const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/reactsoft">
             <Navbar />
             <Routes>
                 <Route path="/" element={<Homepage />} />

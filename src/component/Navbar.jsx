@@ -23,17 +23,17 @@ export const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         News
                     </Typography>
-                    <Button color="inherit">
-                        <Link to="/">home</Link>
+                    <Button >
+                        <Link to="/" style={{ textDecoration: "none" }}>home</Link>
                     </Button>
                     <Button color="inherit">
-                       <Link to="/about">About</Link> 
+                       <Link to="/about" style={{ textDecoration: "none" }}>About</Link> 
                      </Button>
                      <Button color="inherit">
-                       <Link to="/contact">Contact</Link> 
+                       <Link to="/contact" style={{textDecoration:"none"}}>Contact</Link> 
                      </Button>
                       <Button color="inherit">
-                       <Link to="/login">Login</Link> 
+                       <Link to="/login" style={{textDecoration:"none"}}>Login</Link> 
                      </Button>
                 </Toolbar>
             </AppBar>
