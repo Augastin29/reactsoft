@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { senddatatoapi } from '../api/apiser'
 
 export const Login = () => {
+  const [showGuide, setShowGuide] = useState(true);
   const [state, setState] = useState(0)
   const [formData, setFormData] = useState({
     username: "",
@@ -21,7 +22,9 @@ export const Login = () => {
       .then(data => console.log(data))
       .catch(err => console.error(err));
   }
-
+useEffect(() => {
+  setShowGuide(true);
+}, []);
   useEffect(() => {
     fetchData();
     
@@ -31,6 +34,7 @@ export const Login = () => {
 
   // handle input change
   const handleChange = (e) => {
+    setShowGuide(false);
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -68,8 +72,48 @@ export const Login = () => {
       <h1>count:{state}</h1>
       <button onClick={handelClick}>click</button>
       <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-        <h2>Register</h2>
+        <h2>Register </h2>
         {message && <p style={{ color: "red" }}>{message}</p>}
+        {showGuide && (
+  <div style={{
+    position: "absolute",
+    top: "120px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: 1000,
+    textAlign: "center"
+  }}>
+    
+    {/* Hand pointer */}
+    <div style={{
+      fontSize: "40px",
+      animation: "bounce 1s infinite"
+    }}>
+      👇
+    </div>
+
+    {/* Message box */}
+    <div style={{
+      background: "#333",
+      color: "#fff",
+      padding: "10px 15px",
+      borderRadius: "8px",
+      marginTop: "5px"
+    }}>
+      Please fill the register form
+    </div>
+
+    <button 
+      onClick={() => setShowGuide(false)}
+      style={{
+        marginTop: "8px",
+        padding: "5px 10px"
+      }}
+    >
+      Got it
+    </button>
+  </div>
+)}
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "10px" }}>
             <label>Username:</label>
