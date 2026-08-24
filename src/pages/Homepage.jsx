@@ -3,7 +3,7 @@ import Child from '../component/child'
 import { themecontext } from '../component/theme'
 import axios from 'axios'
 import CustomerTable from '../component/data_table'
-export const Homepage = () => {
+ function Homepage (){
     const [theme, setTheme] = useState('light')
     const [search, setSearch] = useState('')
     function submit(e) {
@@ -38,3 +38,4 @@ export const Homepage = () => {
         </div>
     )
 }
+export default Hompage;
