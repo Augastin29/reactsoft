@@ -38,4 +38,4 @@ import CustomerTable from '../component/data_table'
         </div>
     )
 }
-export default Hompage;
+export { Homepage};

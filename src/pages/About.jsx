@@ -154,7 +154,7 @@ const handleSearch=(e)=>{
         </div>
         <div className="fos">
           <img src="http://localhost:5173/public/image/samosa-food-social-media-promotion-instagram-banner-post-template-design\samosa.jpg" alt="Food 3" />
-          <h4>Burgers with sanvages</h4>
+          <h4>Burgers with sanvages thoose</h4>
         </div>
       </div>
       <div className="food-container">
